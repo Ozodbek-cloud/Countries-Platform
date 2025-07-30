@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="icon" href="country.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2>Where in the world?</h2>
+        <button class="dark-mode-toggle">
+            <img src="moon.png" alt="Moon Icon"
+                style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+            Dark Mode
+        </button>
+    </nav>
+    <div class="main">
+        <div class="search-container">
+            <input type="text" placeholder="Search for a country">
+            <img src="search-interface-symbol.png" alt="loupe" style="width: 20px; height: 20px;">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+        <select id="country" name="country" class="filtr">
+            <option value="#">Filtered By Region</option>
+            <option value="afrika">Americas</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="autraliya">Oceania</option>
+            <option value="antarctiva">Antarctic</option>
+        </select>
+    </div>
+    <main class="list">
+            <div class="count">
+                <!-- <img src="" alt="photo of country">
+                <h4><a href="_blank">Germany</a></h4>
+                <p>Population: 81.000.000</p>
+                <p>Region: Europe</p>
+                <p>Capital: Berlin</p> -->
+            </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
