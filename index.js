@@ -7,7 +7,7 @@ let filtr = document.querySelector(".filtr")
 let count = document.querySelector(".count")
 let h = document.querySelector("h2")
 let input = document.querySelector("input")
-
+let span =document.querySelector(".for-white")
 const res = () => {
     fetch('https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags')
         .then(res => res.json())
@@ -16,7 +16,7 @@ const res = () => {
                 list.innerHTML += `
                     <div class="country">
                         <img src="${element.flags.png}" alt="photo of ${element.name.common}" width="100">
-                        <h4><a href="_blank">${element.name.common}</a></h4>
+                        <h4><a href="detail.html">${element.name.common}</a></h4>
                         <p><strong>Population:</strong> ${element.population.toLocaleString()}</p>
                         <p><strong>Region:</strong> ${element.region}</p>
                         <p><strong>Capital:</strong> ${element.capital?.[0] || 'N/A'}</p>
@@ -37,7 +37,7 @@ const res = () => {
                         list.innerHTML += `
                     <div class="country">
                         <img src="${element.flags.png}" alt="photo of ${element.name.common}" width="100">
-                        <h4><a href="_blank">${element.name.common}</a></h4>
+                        <h4><a href="detail.html">${element.name.common}</a></h4>
                         <p><strong>Population:</strong> ${element.population.toLocaleString()}</p>
                         <p><strong>Region:</strong> ${element.region}</p>
                         <p><strong>Capital:</strong> ${element.capital?.[0] || 'N/A'}</p>
@@ -60,7 +60,7 @@ const res = () => {
                         list.innerHTML += `
                     <div class="country">
                         <img src="${element.flags.png}" alt="photo of ${element.name.common}" width="100">
-                        <h4><a href="_blank">${element.name.common}</a></h4>
+                        <h4><a href="detail.html">${element.name.common}</a></h4>
                         <p><strong>Population:</strong> ${element.population.toLocaleString()}</p>
                         <p><strong>Region:</strong> ${element.region}</p>
                         <p><strong>Capital:</strong> ${element.capital?.[0] || 'N/A'}</p>
@@ -80,4 +80,5 @@ button.addEventListener("click", () => {
     search.classList.toggle("dark-mode")
     filtr.classList.toggle("dark-mode")
     count.classList.toggle("dark-count")
+    span.classList.toggle("white-mode")
 });
